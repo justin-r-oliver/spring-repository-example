@@ -1,5 +1,6 @@
 package repo;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class ApplicationTest {
             System.out.println(person.toString());
         }
         System.out.println("#######################: " + repo.count());
+
+        Assert.assertEquals(1, repo.count());
     }
 
 }
